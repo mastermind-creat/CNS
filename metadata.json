@@ -1,0 +1,6 @@
+{
+  "name": "NetSetup Academy",
+  "description": "Interactive educational platform for Computer Network Setup with animated diagrams, subnet calculators, step-by-step labs, and a 40+ question quiz zone.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
