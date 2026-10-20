@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
   }, [displayText, isDeleting, phraseIdx]);
 
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-20 pb-16">
+    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-20 pb-16 w-full max-w-full">
       {/* Cyberpunk Grid Background */}
       <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
 
@@ -120,11 +120,11 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
         {/* Kicker tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-6 backdrop-blur shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          <span>Computer Network Setup Unit (NET-201)</span>
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-300 text-xs font-mono mb-6 backdrop-blur shadow-sm max-w-full">
+          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shrink-0" />
+          <span className="truncate">Computer Network Setup Unit (NET-201)</span>
         </div>
 
         {/* Brand Main Title */}
@@ -133,22 +133,22 @@ export const Hero: React.FC = () => {
         </h1>
 
         {/* Dynamic Typing Subtitle */}
-        <div className="mt-5 min-h-[44px] flex items-center justify-center">
-          <p className="text-lg sm:text-2xl font-mono text-slate-300">
+        <div className="mt-5 min-h-[50px] flex items-center justify-center px-2">
+          <p className="text-base sm:text-xl lg:text-2xl font-mono text-slate-300 break-words">
             {displayText}
-            <span className="inline-block w-2.5 h-6 bg-cyan-400 ml-1 translate-y-0.5 animate-pulse" />
+            <span className="inline-block w-2.5 h-5 sm:h-6 bg-cyan-400 ml-1 translate-y-0.5 animate-pulse" />
           </p>
         </div>
 
-        <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-slate-400 leading-relaxed">
+        <p className="mt-4 max-w-2xl mx-auto text-xs sm:text-base text-slate-400 leading-relaxed px-2">
           The all-in-one interactive guide for aspiring network engineers. Master the physical wire, subnetting arithmetic, Cisco IOS commands, core services, and forensic diagnostics with hands-on simulations.
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 w-full">
           <a
             href="#topics"
-            className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono text-xs sm:text-sm shadow-lg shadow-cyan-500/25 transition-all flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold font-mono text-xs sm:text-sm shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Start Learning Topics</span>
             <ChevronRight className="w-4 h-4" />
@@ -156,14 +156,14 @@ export const Hero: React.FC = () => {
 
           <a
             href="#labs"
-            className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-600 font-semibold font-mono text-xs sm:text-sm transition-all flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-600 font-semibold font-mono text-xs sm:text-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Explore 9 Labs</span>
           </a>
 
           <a
             href="#quiz"
-            className="px-6 py-3.5 rounded-xl bg-purple-950/40 hover:bg-purple-900/40 text-purple-300 border border-purple-500/40 font-semibold font-mono text-xs sm:text-sm transition-all flex items-center gap-2 cursor-pointer"
+            className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-purple-950/40 hover:bg-purple-900/40 text-purple-300 border border-purple-500/40 font-semibold font-mono text-xs sm:text-sm transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
             <span>Take Certification Quiz</span>
           </a>

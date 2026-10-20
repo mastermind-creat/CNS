@@ -52,20 +52,20 @@ export const CablePinoutVisualizer: React.FC = () => {
         </div>
 
         {/* Cable Type Segmented Tabs */}
-        <div className="flex items-center gap-1 p-1 bg-slate-950/80 rounded-lg border border-slate-800 self-start sm:self-auto">
+        <div className="flex flex-wrap items-center gap-1 p-1 bg-slate-950/80 rounded-lg border border-slate-800 self-start sm:self-auto max-w-full">
           <button
             onClick={() => setCableType('straight')}
-            className={`px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
               cableType === 'straight'
                 ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'
             }`}
           >
-            Straight-Through (B-to-B)
+            Straight (B-to-B)
           </button>
           <button
             onClick={() => setCableType('crossover')}
-            className={`px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
               cableType === 'crossover'
                 ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'
@@ -75,7 +75,7 @@ export const CablePinoutVisualizer: React.FC = () => {
           </button>
           <button
             onClick={() => setCableType('standards')}
-            className={`px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
+            className={`px-2.5 sm:px-3 py-1.5 text-xs font-medium rounded-md transition cursor-pointer ${
               cableType === 'standards'
                 ? 'bg-orange-500/20 text-orange-300 border border-orange-500/40 shadow-sm'
                 : 'text-slate-400 hover:text-slate-200'

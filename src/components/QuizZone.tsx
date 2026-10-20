@@ -176,7 +176,7 @@ export const QuizZone: React.FC = () => {
   };
 
   return (
-    <section id="quiz" className="py-20 border-t border-slate-800 bg-[#090e1a] relative">
+    <section id="quiz" className="py-20 border-t border-slate-800 bg-[#090e1a] relative overflow-hidden w-full max-w-full">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-8">
@@ -223,9 +223,9 @@ export const QuizZone: React.FC = () => {
         {/* Main Quiz Card */}
         {!isFinished ? (
           questions.length > 0 && currentQ && (
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/90 p-6 sm:p-8 backdrop-blur shadow-2xl space-y-6">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/90 p-4 sm:p-8 backdrop-blur shadow-2xl space-y-6 max-w-full">
               {/* Meta Status Row */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
                 <div className="flex items-center gap-3">
                   <span
                     className="w-3 h-3 rounded-full"

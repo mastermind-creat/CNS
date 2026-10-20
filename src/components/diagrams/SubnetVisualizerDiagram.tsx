@@ -56,9 +56,9 @@ export const SubnetVisualizerDiagram: React.FC = () => {
         </div>
 
         {/* CIDR Selector */}
-        <div className="flex items-center gap-2 self-start sm:self-auto">
+        <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto max-w-full">
           <span className="text-xs text-slate-400 font-mono">CIDR Prefix:</span>
-          <div className="flex items-center bg-slate-950 rounded-lg p-1 border border-slate-800">
+          <div className="flex flex-wrap items-center bg-slate-950 rounded-lg p-1 border border-slate-800 max-w-full">
             {[24, 25, 26, 27, 28, 29].map((prefix) => (
               <button
                 key={prefix}

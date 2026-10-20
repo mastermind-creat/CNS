@@ -9,7 +9,7 @@ export const UnitOverview: React.FC = () => {
   const [expandedWeek, setExpandedWeek] = useState<number | null>(1);
 
   return (
-    <section id="overview" className="py-20 border-t border-slate-800 bg-[#080d18] relative">
+    <section id="overview" className="py-20 border-t border-slate-800 bg-[#080d18] relative overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12">

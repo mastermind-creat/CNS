@@ -6,6 +6,12 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
 /* Custom Cyber & Grid Backgrounds */
 .cyber-grid {
   background-size: 40px 40px;

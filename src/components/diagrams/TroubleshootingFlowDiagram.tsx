@@ -148,8 +148,8 @@ export const TroubleshootingFlowDiagram: React.FC = () => {
                 <span className="text-[11px]">{copied ? 'Copied' : 'Copy'}</span>
               </button>
             </div>
-            <div className="p-3 rounded-lg bg-black border border-slate-800 font-mono text-xs text-emerald-400 flex items-center justify-between">
-              <code>$ {active.command}</code>
+            <div className="p-3 rounded-lg bg-black border border-slate-800 font-mono text-xs text-emerald-400 flex items-center justify-between overflow-x-auto max-w-full">
+              <code className="whitespace-nowrap sm:whitespace-normal">$ {active.command}</code>
             </div>
           </div>
 

@@ -38,7 +38,7 @@ export const PracticalsSection: React.FC = () => {
   const progressPercent = Math.round((completedCount / LABS.length) * 100);
 
   return (
-    <section id="labs" className="py-20 border-t border-slate-800 bg-[#070b14] relative">
+    <section id="labs" className="py-20 border-t border-slate-800 bg-[#070b14] relative overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Strip */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -77,7 +77,7 @@ export const PracticalsSection: React.FC = () => {
 
         {/* Filters and Search Bar */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8">
-          <div className="flex items-center gap-1 p-1 bg-slate-900 rounded-lg border border-slate-800">
+          <div className="flex flex-wrap items-center gap-1 p-1 bg-slate-900 rounded-lg border border-slate-800 max-w-full">
             {(['all', 'Beginner', 'Intermediate', 'Advanced'] as const).map(diff => (
               <button
                 key={diff}

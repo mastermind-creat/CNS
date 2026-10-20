@@ -94,7 +94,7 @@ export const InteractiveTools: React.FC = () => {
   };
 
   return (
-    <section id="tools" className="py-16 border-t border-slate-800 bg-[#090e1a]/90 relative">
+    <section id="tools" className="py-16 border-t border-slate-800 bg-[#090e1a]/90 relative overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
@@ -110,10 +110,10 @@ export const InteractiveTools: React.FC = () => {
           </p>
 
           {/* Tool Segmented Tabs */}
-          <div className="mt-6 inline-flex p-1 rounded-xl bg-slate-950 border border-slate-800 shadow-lg">
+          <div className="mt-6 flex flex-wrap sm:inline-flex justify-center p-1 rounded-xl bg-slate-950 border border-slate-800 shadow-lg max-w-full gap-1">
             <button
               onClick={() => setActiveTool('subnet')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
+              className={`px-3 sm:px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
                 activeTool === 'subnet'
                   ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm font-semibold'
                   : 'text-slate-400 hover:text-slate-200'
@@ -124,25 +124,25 @@ export const InteractiveTools: React.FC = () => {
             </button>
             <button
               onClick={() => setActiveTool('binary')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
+              className={`px-3 sm:px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
                 activeTool === 'binary'
                   ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm font-semibold'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               <Binary className="w-4 h-4" />
-              <span>Binary ↔ Decimal Octet</span>
+              <span>Binary ↔ Decimal</span>
             </button>
             <button
               onClick={() => setActiveTool('osi')}
-              className={`px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
+              className={`px-3 sm:px-4 py-2 text-xs font-medium rounded-lg transition cursor-pointer flex items-center gap-2 ${
                 activeTool === 'osi'
                   ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-sm font-semibold'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               <Layers className="w-4 h-4" />
-              <span>OSI Layer Deep-Dive</span>
+              <span>OSI Explorer</span>
             </button>
           </div>
         </div>
@@ -335,7 +335,7 @@ export const InteractiveTools: React.FC = () => {
               </div>
 
               {/* Bit Switches */}
-              <div className="grid grid-cols-8 gap-2 sm:gap-3">
+              <div className="grid grid-cols-4 sm:grid-cols-8 gap-2 sm:gap-3">
                 {bitWeights.map((weight, idx) => {
                   const bit = bits[idx];
                   return (

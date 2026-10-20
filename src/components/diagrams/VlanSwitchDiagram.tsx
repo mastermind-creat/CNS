@@ -78,12 +78,12 @@ export const VlanSwitchDiagram: React.FC = () => {
 
       {/* Switch Chassis Visualizer */}
       <div className="mt-6 p-5 rounded-xl bg-slate-950 border border-slate-800 shadow-2xl relative">
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50" />
             <span className="text-xs font-mono font-bold text-slate-300">CISCO CATALYST 2960-24TT</span>
           </div>
-          <div className="flex items-center gap-4 text-xs font-mono">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-mono">
             <span className="text-sky-400">● VLAN 10 (Sales)</span>
             <span className="text-purple-400">● VLAN 20 (Engineering)</span>
             <span className="text-rose-400">● 802.1Q Trunk</span>

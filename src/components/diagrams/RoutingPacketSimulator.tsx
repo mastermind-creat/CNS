@@ -116,27 +116,28 @@ export const RoutingPacketSimulator: React.FC = () => {
 
       {/* Network Hop Path Topology Visualizer */}
       <div className="mt-6 p-4 rounded-xl bg-slate-950 border border-slate-800 relative overflow-hidden">
-        <div className="grid grid-cols-5 gap-2 sm:gap-4 relative z-10 text-center">
-          {[
-            { name: 'Host A', ip: '192.168.1.10', icon: '💻' },
-            { name: 'Switch SW1', ip: 'Layer 2 CAM', icon: '🔀' },
-            { name: 'Router R1', ip: '192.168.1.1', icon: '🌐' },
-            { name: 'ISP Router R2', ip: '172.16.0.2', icon: '⚡' },
-            { name: 'Server B', ip: '10.0.0.50', icon: '🖥️' }
-          ].map((node, idx) => {
-            const isCurrent = currentStepIndex === idx;
-            const isPassed = currentStepIndex > idx;
-            return (
-              <div
-                key={node.name}
-                className={`p-2.5 sm:p-3 rounded-lg border transition-all duration-300 flex flex-col items-center justify-between ${
-                  isCurrent
-                    ? 'border-pink-400 bg-pink-950/40 shadow-lg shadow-pink-500/25 ring-1 ring-pink-400'
-                    : isPassed
-                    ? 'border-emerald-500/60 bg-emerald-950/20'
-                    : 'border-slate-800 bg-slate-900/50 opacity-60'
-                }`}
-              >
+        <div className="overflow-x-auto pb-2 -mx-1 px-1">
+          <div className="grid grid-cols-5 min-w-[460px] sm:min-w-0 gap-2 sm:gap-4 relative z-10 text-center">
+            {[
+              { name: 'Host A', ip: '192.168.1.10', icon: '💻' },
+              { name: 'Switch SW1', ip: 'Layer 2 CAM', icon: '🔀' },
+              { name: 'Router R1', ip: '192.168.1.1', icon: '🌐' },
+              { name: 'ISP Router R2', ip: '172.16.0.2', icon: '⚡' },
+              { name: 'Server B', ip: '10.0.0.50', icon: '🖥️' }
+            ].map((node, idx) => {
+              const isCurrent = currentStepIndex === idx;
+              const isPassed = currentStepIndex > idx;
+              return (
+                <div
+                  key={node.name}
+                  className={`p-2.5 sm:p-3 rounded-lg border transition-all duration-300 flex flex-col items-center justify-between ${
+                    isCurrent
+                      ? 'border-pink-400 bg-pink-950/40 shadow-lg shadow-pink-500/25 ring-1 ring-pink-400'
+                      : isPassed
+                      ? 'border-emerald-500/60 bg-emerald-950/20'
+                      : 'border-slate-800 bg-slate-900/50 opacity-60'
+                  }`}
+                >
                 <span className="text-xl sm:text-2xl mb-1">{node.icon}</span>
                 <span className="text-xs font-bold text-slate-200 block truncate w-full">{node.name}</span>
                 <span className="text-[10px] font-mono text-slate-400 block truncate w-full">{node.ip}</span>
@@ -150,6 +151,7 @@ export const RoutingPacketSimulator: React.FC = () => {
           })}
         </div>
       </div>
+    </div>
 
       {/* Live Header Inspection Telemetry */}
       <div className="mt-4 grid grid-cols-1 md:grid-cols-12 gap-4">

@@ -8,7 +8,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenCheatSheet, onOpenGlossary }) => {
   return (
-    <footer className="border-t border-slate-800 bg-[#05080f] py-12 text-xs font-mono text-slate-400">
+    <footer className="border-t border-slate-800 bg-[#05080f] py-12 text-xs font-mono text-slate-400 overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800/80">
           {/* Col 1: Unit Info */}

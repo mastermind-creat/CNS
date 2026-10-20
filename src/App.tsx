@@ -41,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-[#070b14] text-slate-100 flex flex-col font-sans selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden w-full max-w-full">
       {/* Top Bar Navigation */}
       <Navbar onOpenCheatSheet={openCheatSheet} onOpenGlossary={openGlossary} />
 
@@ -49,7 +49,7 @@ export default function App() {
       <StickyScrollTracker />
 
       {/* Main Content Sections */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {/* 1. Hero Section */}
         <Hero />
 
@@ -57,7 +57,7 @@ export default function App() {
         <UnitOverview />
 
         {/* 3. Topic Modules (8 Color-Coded Sections) */}
-        <div id="topics" className="relative scroll-mt-24">
+        <div id="topics" className="relative scroll-mt-24 overflow-hidden w-full max-w-full">
           <div className="pt-16 pb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span className="text-xs font-mono font-bold text-cyan-400 uppercase tracking-widest block mb-2">
               Curriculum Core

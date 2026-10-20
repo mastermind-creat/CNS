@@ -52,11 +52,11 @@ export const TopicSection: React.FC<TopicSectionProps> = ({ topic, onJumpToLab, 
   return (
     <section
       id={`topic-${topic.id}`}
-      className="py-20 border-t border-slate-800/80 relative scroll-mt-24"
+      className="py-20 border-t border-slate-800/80 relative scroll-mt-24 overflow-hidden w-full max-w-full"
     >
       {/* Background ambient neon glow */}
       <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] blur-[140px] pointer-events-none opacity-10 rounded-full"
+        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] max-w-full h-[300px] blur-[140px] pointer-events-none opacity-10 rounded-full"
         style={{ backgroundColor: topic.colorHex }}
       />
 

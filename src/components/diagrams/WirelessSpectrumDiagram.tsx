@@ -64,31 +64,33 @@ export const WirelessSpectrumDiagram: React.FC = () => {
               </span>
             </div>
 
-            <div className="grid grid-cols-11 gap-1 sm:gap-2">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((ch) => {
-                const isNonOverlap = ch === 1 || ch === 6 || ch === 11;
-                const isSelected = selectedChannel === ch;
-                return (
-                  <button
-                    key={ch}
-                    onClick={() => setSelectedChannel(ch)}
-                    className={`py-2 px-1 rounded border text-center transition cursor-pointer ${
-                      isSelected
-                        ? isNonOverlap
-                          ? 'border-cyan-400 bg-cyan-950/50 text-cyan-300 shadow-md ring-1 ring-cyan-400 font-bold'
-                          : 'border-amber-500 bg-amber-950/40 text-amber-300 shadow-md ring-1 ring-amber-500 font-bold'
-                        : isNonOverlap
-                        ? 'border-slate-700 bg-slate-950 text-slate-200 hover:border-cyan-500/50'
-                        : 'border-slate-800 bg-slate-950/40 text-slate-500 hover:border-slate-700'
-                    }`}
-                  >
-                    <span className="text-xs font-mono block">Ch {ch}</span>
-                    <span className="text-[9px] block opacity-70">
-                      {isNonOverlap ? 'Clean' : 'Overlap'}
-                    </span>
-                  </button>
-                );
-              })}
+            <div className="overflow-x-auto pb-2 -mx-1 px-1">
+              <div className="grid grid-cols-11 min-w-[460px] sm:min-w-0 gap-1 sm:gap-2">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((ch) => {
+                  const isNonOverlap = ch === 1 || ch === 6 || ch === 11;
+                  const isSelected = selectedChannel === ch;
+                  return (
+                    <button
+                      key={ch}
+                      onClick={() => setSelectedChannel(ch)}
+                      className={`py-2 px-1 rounded border text-center transition cursor-pointer ${
+                        isSelected
+                          ? isNonOverlap
+                            ? 'border-cyan-400 bg-cyan-950/50 text-cyan-300 shadow-md ring-1 ring-cyan-400 font-bold'
+                            : 'border-amber-500 bg-amber-950/40 text-amber-300 shadow-md ring-1 ring-amber-500 font-bold'
+                          : isNonOverlap
+                          ? 'border-slate-700 bg-slate-950 text-slate-200 hover:border-cyan-500/50'
+                          : 'border-slate-800 bg-slate-950/40 text-slate-500 hover:border-slate-700'
+                      }`}
+                    >
+                      <span className="text-xs font-mono block">Ch {ch}</span>
+                      <span className="text-[9px] block opacity-70">
+                        {isNonOverlap ? 'Clean' : 'Overlap'}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 

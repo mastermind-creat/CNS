@@ -48,9 +48,9 @@ export const GlossaryCheatSheetModal: React.FC<GlossaryCheatSheetModalProps> = (
         aria-modal="true"
       >
         {/* Modal Top Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950">
-          <div className="flex items-center gap-6">
-            <h3 className="text-lg font-bold font-display text-white whitespace-nowrap">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 sm:px-6 py-4 border-b border-slate-800 bg-slate-950">
+          <div className="flex flex-wrap items-center justify-between sm:justify-start gap-3 w-full sm:w-auto">
+            <h3 className="text-base sm:text-lg font-bold font-display text-white whitespace-nowrap">
               Engineering Reference Desk
             </h3>
 

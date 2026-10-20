@@ -56,16 +56,16 @@ export const StickyScrollTracker: React.FC = () => {
       </div>
 
       {/* Color Legend & Topic Breadcrumb Row */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-4 text-xs font-mono">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-2 sm:gap-4 text-xs font-mono w-full overflow-hidden">
         {/* Active Section Indicator */}
-        <div className="flex items-center gap-2 truncate">
-          <span className="text-slate-400 hidden sm:inline">Active Module:</span>
-          <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 truncate min-w-0">
+          <span className="text-slate-400 hidden sm:inline shrink-0">Active Module:</span>
+          <div className="flex items-center gap-2 truncate min-w-0">
             <span
               className="w-2.5 h-2.5 rounded-full shrink-0"
               style={{ backgroundColor: activeTopic.colorHex, boxShadow: `0 0 6px ${activeTopic.colorHex}` }}
             />
-            <span className="font-bold text-white truncate">
+            <span className="font-bold text-white truncate min-w-0">
               {activeTopic.number}. {activeTopic.title}
             </span>
           </div>
